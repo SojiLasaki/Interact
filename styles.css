@@ -1,0 +1,141 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background:#0c0c0c;
+  color: #ffffff;
+  font: 16px system-ui, sans-serif;
+}
+
+main {
+    max-width: 560px;
+    padding: 32px;
+    text-align: center;
+    }
+
+h1 {
+    margin-bottom: 2px;
+    }
+
+p {
+    color: #aab4bf;
+    }
+
+/* loading window */
+.highlight {
+    font-style: italic;
+}
+
+#splash-intro.is-hiding {
+  opacity: 0;
+}
+
+#splash-intro {
+  animation: fade-in 1s ease-in, fade-out 2s ease-out 4.3s;
+}
+
+#splash-intro[hidden],
+#home-window[hidden] {
+    display: none !important;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+/* maim content */
+#main-screen {
+  width: min(960px, calc(100% - 48px));
+  max-width: none;
+  padding: 48px 0;
+  text-align: left;
+}
+
+#main-screen[hidden] {
+  display: none !important;
+}
+
+.page-heading {
+  margin-bottom: 28px;
+}
+
+.page-heading h1 {
+  margin: 0 0 8px;
+}
+
+.page-heading > p:last-child,
+.card-description {
+  color: #667085;
+}
+
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.device-card {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 16px 40px rgba(40, 55, 85, 0.1);
+  backdrop-filter: blur(24px) saturate(160%);
+}
+
+.eyebrow {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.device-card h2 {
+  margin: 0 0 8px;
+}
+
+.device-card label {
+  display: block;
+  margin: 20px 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.device-card select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid rgba(90, 105, 135, 0.2);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #202633;
+  font: inherit;
+}
+
+.continue-button {
+  margin-top: 24px;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 16px;
+  background: #000000;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+}
+
+.continue-button:disabled {
+  opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+  .device-grid {
+    grid-template-columns: 1fr;
+  }
+}

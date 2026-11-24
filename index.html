@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interact</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+        <section id="splash-intro">
+            <h1>begin your <span class="highlight"></span>interact</span>ion</h1>
+            <p>the new way to do stuff.</p>
+        </section>
+        <section id="home-window" hidden>
+            <header id="page-header">
+                <p class="eyebrow">interact</p>
+                <h1>Connect your setup</h1>
+                <p>Choose the displays and camera you would like to use.</p>
+            </header>
+
+            <div class="device-grid">
+                <section class="device-card">
+                    <select id="projector-select">
+                    <p class="card-description">
+                        find available projectors
+                    </p>
+                    <label for="projector-select">Projector</label>
+                        <option value="">Choose a display</option>
+                    </select>
+                </section>
+
+                <section class="device-card">
+                    <select id="camera-select">
+                    <label for="camera-select">Connected camera</label>
+                        <option value="">Choose a camera</option>
+                    </select>
+                    </section>
+                </div>
+
+                <button class="continue-button" type="button" disabled>
+                    Continue to alignment
+                </button>
+
+        </section>
+    </main>
+  </body>
+  <script src="renderer.js"></script>
+</html>
